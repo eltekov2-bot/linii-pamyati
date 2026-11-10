@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Линии памяти — учебный генеалогический помощник: персоны, связи, источники и исследовательские гипотезы.">
+  <title>Линии памяти — генеалогический помощник</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="brand" aria-label="Линии памяти — главная">
+      <div class="brand-symbol" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 41V13m0 13-11-9m11 2 12-11M24 33l11-8M24 16 16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="9" r="3.5" fill="currentColor"/><circle cx="36" cy="8" r="3.5" fill="currentColor"/><circle cx="13" cy="17" r="3.5" fill="currentColor"/><circle cx="35" cy="25" r="3.5" fill="currentColor"/><circle cx="24" cy="12" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-name"><strong>Линии памяти</strong><span>генеалогический помощник</span></div>
+    </div>
+    <div class="header-actions">
+      <span class="demo-pill"><span class="demo-dot"></span> Учебная версия</span>
+      <button class="outline-button header-guide" data-view-target="about" type="button">Как пользоваться <span aria-hidden="true">→</span></button>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-wrap">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> ЧАСТНЫЙ АРХИВ · ДЕМОНСТРАЦИЯ</div>
+        <h1 id="hero-heading">У каждой семьи<br><em>есть своя история.</em></h1>
+        <p>Собирайте имена, связи и документы в единую картину. Сохраняйте границу между тем, что подтверждено, и тем, что ещё предстоит доказать.</p>
+        <div class="hero-buttons">
+          <button class="primary-button" data-view-target="people" type="button">Исследовать персоны <span aria-hidden="true">→</span></button>
+          <button class="text-button" data-view-target="tree" type="button">Посмотреть связи <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Стилизованная архивная папка семьи Лаптевых">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="archive-sheet sheet-back"><span>ARCHIVUM<br>FAMILIAE</span></div>
+        <div class="archive-sheet sheet-mid"><span class="sheet-mini-line"></span><span class="sheet-mini-line short"></span><span class="sheet-mini-line"></span></div>
+        <div class="archive-sheet sheet-front">
+          <div class="sheet-head"><span>СЕМЕЙНЫЙ АРХИВ</span><span>№ 001</span></div>
+          <div class="hero-monogram">Л</div>
+          <div class="sheet-title">Лаптевы</div>
+          <div class="sheet-years">1878 — 1946</div>
+          <div class="sheet-footer"><span>10 персон</span><span>8 документов</span></div>
+        </div>
+        <div class="art-seal">ФАКТЫ<br>И ВЕРСИИ</div>
+      </div>
+    </section>
+
+    <div class="notice-banner" role="note"><span class="notice-icon">i</span><span>Все имена, события и архивные записи в этом проекте <strong>вымышлены</strong> и предназначены только для демонстрации работы приложения.</span></div>
+
+    <nav class="section-nav" aria-label="Разделы приложения" role="tablist">
+      <button class="nav-tab active" id="tab-overview" role="tab" aria-selected="true" aria-controls="view-overview" data-view-target="overview" type="button"><span class="nav-num">01</span> Обзор</button>
+      <button class="nav-tab" id="tab-people" role="tab" aria-selected="false" aria-controls="view-people" data-view-target="people" type="button"><span class="nav-num">02</span> Персоны</button>
+      <button class="nav-tab" id="tab-sources" role="tab" aria-selected="false" aria-controls="view-sources" data-view-target="sources" type="button"><span class="nav-num">03</span> Источники</button>
+      <button class="nav-tab" id="tab-tree" role="tab" aria-selected="false" aria-controls="view-tree" data-view-target="tree" type="button"><span class="nav-num">04</span> Связи</button>
+      <button class="nav-tab" id="tab-about" role="tab" aria-selected="false" aria-controls="view-about" data-view-target="about" type="button"><span class="nav-num">05</span> О проекте</button>
+    </nav>
+
+    <section id="view-overview" class="content-section" role="tabpanel" aria-labelledby="tab-overview">
+      <div class="section-heading"><div><p class="section-overline">АРХИВ В ЦИФРАХ</p><h2>Начало исследования</h2></div><span class="section-side-label">Дело семьи Лаптевых</span></div>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-label">Персон в архиве</span><strong id="stat-people">10</strong><span class="stat-caption">4 поколения родственных связей</span></div>
+        <div class="stat-card"><span class="stat-label">Документов</span><strong id="stat-sources">8</strong><span class="stat-caption">Метрические книги и списки</span></div>
+        <div class="stat-card"><span class="stat-label">Подтверждено</span><strong id="stat-confirmed">9</strong><span class="stat-caption">Персон с прямыми источниками</span></div>
+        <div class="stat-card warm"><span class="stat-label">Требует проверки</span><strong id="stat-hypotheses">1</strong><span class="stat-caption">Открытая исследовательская версия</span></div>
+      </div>
+      <div class="overview-grid">
+        <article class="feature-card">
+          <div class="feature-label"><span class="small-diamond"></span> ИСТОРИЯ АРХИВА</div>
+          <h3>От одной записи<br>к нескольким поколениям</h3>
+          <p>Начальная точка — условная запись о браке 1878 года. От неё прослеживаются дети, внуки и правнуки. Одно родство пока остаётся предположением.</p>
+          <div class="feature-decoration" aria-hidden="true">1878<span>·</span>1946</div>
+          <button class="inline-arrow" data-view-target="tree" type="button">Смотреть родственные связи <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="workflow-card">
+          <p class="section-overline">КАК УСТРОЕНО ИССЛЕДОВАНИЕ</p>
+          <h3>Путь от имени к доказательству</h3>
+          <ol class="workflow-list">
+            <li><span class="step-index">01</span><span><strong>Найдите человека</strong><small>Поиск по фамилии, имени или месту</small></span></li>
+            <li><span class="step-index">02</span><span><strong>Проверьте утверждения</strong><small>Факты отделены от гипотез</small></span></li>
+            <li><span class="step-index">03</span><span><strong>Откройте источник</strong><small>У каждого документа есть архивный шифр</small></span></li>
+            <li><span class="step-index">04</span><span><strong>Сохраните заметку</strong><small>Локально на этом устройстве</small></span></li>
+          </ol>
+          <button class="secondary-button" data-view-target="people" type="button">Начать с каталога <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+      <div class="section-heading compact"><div><p class="section-overline">ДОКУМЕНТЫ ИССЛЕДОВАНИЯ</p><h2>Опорные источники</h2></div><button class="inline-arrow" data-view-target="sources" type="button">Все документы →</button></div>
+      <div id="featured-sources" class="featured-sources"></div>
+    </section>
+
+    <section id="view-people" class="content-section" role="tabpanel" aria-labelledby="tab-people" hidden>
+      <div class="section-heading"><div><p class="section-overline">ИМЕННОЙ УКАЗАТЕЛЬ</p><h2>Каталог персон</h2></div><span class="section-side-label" id="people-count-label">10 записей</span></div>
+      <div class="filter-bar">
+        <label class="search-field"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Поиск людей</span><input id="people-search" type="search" autocomplete="off" placeholder="Имя, фамилия или место…"></label>
+        <label class="select-field"><span class="sr-only">Статус сведений</span><select id="people-status"><option value="all">Все статусы</option><option value="confirmed">Подтверждено</option><option value="hypothesis">Есть гипотеза</option></select></label>
+        <button id="people-reset" class="filter-reset" type="button">Сбросить</button>
+        <button id="export-people" class="export-button" type="button"><span aria-hidden="true">↓</span> Скачать CSV</button>
+      </div>
+      <div class="filter-summary" aria-live="polite" id="people-summary"></div>
+      <div id="people-grid" class="people-grid"></div>
+      <div id="people-empty" class="empty-state" hidden><div class="empty-glyph">⌕</div><h3>Никого не найдено</h3><p>Попробуйте изменить запрос или сбросить фильтр.</p><button class="secondary-button" id="empty-reset" type="button">Показать всех</button></div>
+    </section>
+
+    <section id="view-sources" class="content-section" role="tabpanel" aria-labelledby="tab-sources" hidden>
+      <div class="section-heading"><div><p class="section-overline">ОПИСЬ ДОКУМЕНТОВ</p><h2>Архивные источники</h2></div><span class="section-side-label">Все документы — учебные</span></div>
+      <p class="section-intro">Условный шифр, дата и краткая расшифровка помогают понять, какое именно утверждение поддерживает каждый источник.</p>
+      <div class="filter-bar source-filter-bar"><label class="search-field"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Поиск документов</span><input id="source-search" type="search" autocomplete="off" placeholder="Название, год или шифр…"></label><label class="select-field"><span class="sr-only">Тип документа</span><select id="source-type"><option value="all">Все виды документов</option><option value="Метрическая запись">Метрические записи</option><option value="Посемейный список">Посемейные списки</option></select></label><button id="sources-reset" class="filter-reset" type="button">Сбросить</button></div>
+      <div class="filter-summary" aria-live="polite" id="sources-summary"></div>
+      <div id="sources-grid" class="sources-grid"></div>
+      <div id="sources-empty" class="empty-state" hidden><div class="empty-glyph">⌕</div><h3>Документы не найдены</h3><p>Попробуйте другой год, название или тип.</p></div>
+    </section>
+
+    <section id="view-tree" class="content-section" role="tabpanel" aria-labelledby="tab-tree" hidden>
+      <div class="section-heading"><div><p class="section-overline">РОДСТВЕННЫЕ СВЯЗИ</p><h2>Линия семьи Лаптевых</h2></div><span class="section-side-label">Четыре поколения</span></div>
+      <p class="section-intro">Карточки расположены по поколениям. Нажмите на имя, чтобы увидеть сведения и документы. Пунктирная отметка обозначает неподтверждённую связь.</p>
+      <div class="tree-legend"><span><i class="legend-dot confirmed"></i> Подтверждённые сведения</span><span><i class="legend-dot hypothesized"></i> Требует проверки</span></div>
+      <div id="family-tree" class="family-tree"></div>
+      <div class="method-note"><strong>Важно:</strong> схема отражает связи из учебных данных. Она не доказывает родство сама по себе: доказательства и неопределённости описаны в карточках персон и источников.</div>
+    </section>
+
+    <section id="view-about" class="content-section" role="tabpanel" aria-labelledby="tab-about" hidden>
+      <div class="section-heading"><div><p class="section-overline">МЕТОД И ОГРАНИЧЕНИЯ</p><h2>О проекте</h2></div><span class="section-side-label">Версия 1.0</span></div>
+      <div class="about-grid">
+        <article class="about-card"><div class="about-number">01</div><h3>Задача</h3><p>Помочь исследователю быстро находить родственников, читать подтверждающие документы и не выдавать предположения за факты.</p></article>
+        <article class="about-card"><div class="about-number">02</div><h3>Данные</h3><p>Демонстрационная семья и все архивные цитаты созданы специально для курса. Реальных персональных данных здесь нет.</p></article>
+        <article class="about-card"><div class="about-number">03</div><h3>Проверка</h3><p>Поиск и фильтры, переходы между персоной и документом, сохранение заметки, обработка пустого результата и экспорт CSV.</p></article>
+        <article class="about-card"><div class="about-number">04</div><h3>Хранение</h3><p>Каталог встроен в приложение. Личные заметки сохраняются только в браузере. Сервер, регистрация и синхронизация не используются.</p></article>
+      </div>
+      <div class="about-bottom"><div><span class="section-overline">КАК ПОЛУЧИТЬ РЕЗУЛЬТАТ</span><h3>Сначала источник. Потом вывод.</h3><p>Если источник допускает несколько трактовок, приложение явно помечает вывод как гипотезу. Исследовательская добросовестность важнее красивой, но недоказанной родословной.</p></div><button class="primary-button" data-view-target="people" type="button">Перейти к исследованию →</button></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand">Линии памяти <span>·</span> Демонстрационный проект</div><div>Создано для учебного курса · Все данные вымышлены</div></footer>
+
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><div class="dialog-shell"><button id="dialog-close" class="dialog-close" type="button" aria-label="Закрыть карточку">×</button><div id="detail-content"></div></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-alert">Для работы интерактивного каталога необходимо включить JavaScript.</div></noscript>
+</body>
+</html>
